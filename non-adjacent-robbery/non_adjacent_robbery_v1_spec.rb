@@ -3,6 +3,18 @@ require './non_adjacent_robbery_v1'
 include NonAdjacentRobbery
 
 describe 'NonAdjacentRobbery v1' do
+  describe '#even_sum' do
+    it 'returns the sum of elements at even indices' do
+      expect(even_sum([1,2,3,4,5])).to eq 9
+    end
+  end
+
+  describe '#odd_sum' do
+    it 'returns the sum of elements at odd indices' do
+      expect(odd_sum([1,2,3,4,5])).to eq 6
+    end
+  end
+
   describe '#rob' do
     it 'returns the maximum obtainable value without robbing adjacent houses' do
 
