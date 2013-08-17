@@ -1,0 +1,1 @@
+A 64-bit integer can be viewed as an array or bits, with the bit at index 0 corresponding to the least significant bit, and the bit at index 63 corresponding to the most significant bit. Implement code that takes as input a 64-bit integer x, and swaps the bits at indices i and j.
