@@ -1,3 +1,5 @@
+'use strict'
+
 var Message = function(text) {
   this.text = text.trim()
 }
@@ -16,7 +18,7 @@ Message.prototype.question = function() {
 
 var Bob = function() {
   this.hey = function(text) {
-    message = new Message(text)
+    var message = new Message(text)
     if (message.silence()) {
       return this.responses.silence
     } else if (message.shouting()) {
