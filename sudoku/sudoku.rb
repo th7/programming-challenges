@@ -16,6 +16,10 @@ module Sudoku
       true
     end
 
+    def solved?
+      valid? && tiles.all? {|t| (1..9).include?(t)}
+    end
+
     def rows
       @array2d
     end
@@ -32,6 +36,10 @@ module Sudoku
         end
       end
       cells
+    end
+
+    def tiles
+      @array2d.flatten
     end
 
     def block_groups
