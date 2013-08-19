@@ -11,9 +11,13 @@ class Phrase
 
   def count_words
     counts = Hash.new(0)
-    @raw_words.downcase.split(/\W+/).each do |word|
+    refined_words.each do |word|
       counts[word] += 1
     end
     counts
+  end
+
+  def refined_words
+    @raw_words.downcase.scan(/\w+/)
   end
 end
