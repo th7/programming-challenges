@@ -1,20 +1,5 @@
 'use strict'
 
-var Message = function(text) {
-  this.text = text.trim()
-}
-
-Message.prototype.silence = function() {
-  return (this.text === '')
-}
-
-Message.prototype.shouting = function() {
-  return (this.text.toUpperCase() === this.text)
-}
-
-Message.prototype.question = function() {
-  return (this.text.slice(-1) === '?')
-}
 
 var Bob = function() {
   this.hey = function(text) {
@@ -38,4 +23,19 @@ Bob.prototype.responses = {
   generic: 'Whatever.'
 }
 
+var Message = function(text) {
+  this.text = text.trim()
+}
+
+Message.prototype.silence = function() {
+  return (this.text === '')
+}
+
+Message.prototype.shouting = function() {
+  return (this.text.toUpperCase() === this.text)
+}
+
+Message.prototype.question = function() {
+  return (this.text.slice(-1) === '?')
+}
 module.exports = Bob
