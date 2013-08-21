@@ -38,4 +38,5 @@ Message.prototype.shouting = function() {
 Message.prototype.question = function() {
   return (this.text.slice(-1) === '?')
 }
+
 module.exports = Bob
